@@ -30,6 +30,17 @@ A system to manage medical appointments, built with Spring Boot and Vue.js.
 
 2. Create a MySQL database named `appointment_db` and update `src/main/resources/application.properties`:
 
+
+CREATE TABLE appointments_db.appointment (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    patient_name VARCHAR(255) NOT NULL,
+    doctor_name VARCHAR(255) NOT NULL,
+    date VARCHAR(255) NOT NULL,
+    time VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/appointment_db
    spring.datasource.username=your-username
